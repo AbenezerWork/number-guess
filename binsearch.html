@@ -145,7 +145,7 @@
 
 <div id="game">
     <h1>Mobile Card Guessing Game</h1>
-    <p>The mobile card starts with <strong>1234 1234 123</strong>. Guess the last 4 digits!</p>
+    <p>The mobile card starts with <strong>52010-4068-6</strong>. Guess the last 4 digits!</p>
     <input type="number" id="guess" placeholder="Enter your guess (4 digits)" min="0000" max="9999">
     <button id="check-guess">Check Guess</button>
     <div id="result-message"></div>
@@ -173,7 +173,7 @@
             return;
         }
         const userGuessHash = hashNumber(userGuess);
-        secretNumberHash = hashNumber(secretNumber);
+        secretNumberHash = "efb76cff97aaf057654ef2f38cd77d73";
         if (userGuessHash === secretNumberHash) {
             resultMessage.textContent = 'Congratulations! You guessed the correct number.';
             resultMessage.className = 'correct';

@@ -147,7 +147,7 @@
 <div id="game">
     <h1>Mobile Card Guessing Game</h1>
     <p>Guess the digits of the card to win the prize!</p>
-    <input type="number" id="guess" placeholder="Enter your guess (11 digits)" min="0000" max="99999999999">
+    <input type="number" id="guess" placeholder="Enter your guess (14 digits)" min="0" max="99999999999999999">
     <button id="check-guess">Check Guess</button>
     <div id="result-message"></div>
     <footer>
@@ -163,13 +163,13 @@
     const resultMessage = document.getElementById('result-message');
 
 
-    let secretNumberHash ="86391dbe39674a7a2e2d7a7544d75566";  
+    let secretNumberHash ="24ca5a1dab7bc9bd5840a4fe86ae6e71";  
     function hashNumber(number) {
         return CryptoJS.MD5(number.toString()).toString();
     }
     function checkGuess() {
         const userGuess = parseInt(guessInput.value.trim(), 10);
-        if (isNaN(userGuess) || userGuess < 0 || userGuess > 99999999999) {
+        if (isNaN(userGuess) || userGuess < 0 || userGuess > 99_999_999_999_999) {
             alert('Please enter a valid 4-digit number.');
             return;
         }
